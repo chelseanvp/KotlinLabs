@@ -1,0 +1,25 @@
+package Task1
+fun task1(){
+    val salesman = Salesman("Nikolay")
+    val customers = mutableListOf<Customer>()
+    val productTypes = mutableListOf<String>()
+    val personalProductsNames = mutableListOf<String>()
+    println(Shop.guitars)
+    println(Shop.headphones)
+    println(Shop.musicPlayer)
+    customers.add(Customer(120,"Ivan","Ivanko"))
+    productTypes.add("headphones")
+    personalProductsNames.add("closed_back")
+    customers.add(Customer(200,"Dima","Below"))
+    productTypes.add("music player")
+    personalProductsNames.add("ipod")
+    customers.add(Customer(30,"Kiril","Krivoy"))
+    productTypes.add("guitar")
+    personalProductsNames.add("bass")
+
+    salesman.service(customers,productTypes,personalProductsNames)
+    salesman.service(customers[0],productTypes[0],personalProductsNames[0])
+    println(Shop.guitars)
+    println(Shop.headphones)
+    println(Shop.musicPlayer)
+}
